@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592EF036168CC5030018A7FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592EF035168CC5030018A7FF /* Cocoa.framework */; };
+		592EF040168CC5030018A7FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592EF03E168CC5030018A7FF /* InfoPlist.strings */; };
+		592EF042168CC5030018A7FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EF041168CC5030018A7FF /* main.m */; };
+		592EF046168CC5030018A7FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 592EF044168CC5030018A7FF /* Credits.rtf */; };
+		592EF049168CC5030018A7FF /* NMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EF048168CC5030018A7FF /* NMAppDelegate.m */; };
+		592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EF04A168CC5030018A7FF /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		592EF031168CC5030018A7FF /* NinemJukeboxServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinemJukeboxServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		592EF035168CC5030018A7FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		592EF038168CC5030018A7FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		592EF039168CC5030018A7FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		592EF03A168CC5030018A7FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		592EF03D168CC5030018A7FF /* NinemJukeboxServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NinemJukeboxServer-Info.plist"; sourceTree = "<group>"; };
+		592EF03F168CC5030018A7FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592EF041168CC5030018A7FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		592EF043168CC5030018A7FF /* NinemJukeboxServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NinemJukeboxServer-Prefix.pch"; sourceTree = "<group>"; };
+		592EF045168CC5030018A7FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		592EF047168CC5030018A7FF /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
+		592EF048168CC5030018A7FF /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
+		592EF04B168CC5030018A7FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592EF02E168CC5030018A7FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EF036168CC5030018A7FF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		592EF026168CC5030018A7FF = {
+			isa = PBXGroup;
+			children = (
+				592EF03B168CC5030018A7FF /* NinemJukeboxServer */,
+				592EF034168CC5030018A7FF /* Frameworks */,
+				592EF032168CC5030018A7FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592EF032168CC5030018A7FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592EF031168CC5030018A7FF /* NinemJukeboxServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		592EF034168CC5030018A7FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592EF035168CC5030018A7FF /* Cocoa.framework */,
+				592EF037168CC5030018A7FF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		592EF037168CC5030018A7FF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592EF038168CC5030018A7FF /* AppKit.framework */,
+				592EF039168CC5030018A7FF /* CoreData.framework */,
+				592EF03A168CC5030018A7FF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		592EF03B168CC5030018A7FF /* NinemJukeboxServer */ = {
+			isa = PBXGroup;
+			children = (
+				592EF047168CC5030018A7FF /* NMAppDelegate.h */,
+				592EF048168CC5030018A7FF /* NMAppDelegate.m */,
+				592EF04A168CC5030018A7FF /* MainMenu.xib */,
+				592EF03C168CC5030018A7FF /* Supporting Files */,
+			);
+			path = NinemJukeboxServer;
+			sourceTree = "<group>";
+		};
+		592EF03C168CC5030018A7FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592EF03D168CC5030018A7FF /* NinemJukeboxServer-Info.plist */,
+				592EF03E168CC5030018A7FF /* InfoPlist.strings */,
+				592EF041168CC5030018A7FF /* main.m */,
+				592EF043168CC5030018A7FF /* NinemJukeboxServer-Prefix.pch */,
+				592EF044168CC5030018A7FF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592EF030168CC5030018A7FF /* NinemJukeboxServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592EF04F168CC5030018A7FF /* Build configuration list for PBXNativeTarget "NinemJukeboxServer" */;
+			buildPhases = (
+				592EF02D168CC5030018A7FF /* Sources */,
+				592EF02E168CC5030018A7FF /* Frameworks */,
+				592EF02F168CC5030018A7FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinemJukeboxServer;
+			productName = NinemJukeboxServer;
+			productReference = 592EF031168CC5030018A7FF /* NinemJukeboxServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592EF028168CC5030018A7FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NM;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = 9MMedia;
+			};
+			buildConfigurationList = 592EF02B168CC5030018A7FF /* Build configuration list for PBXProject "NinemJukeboxServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 592EF026168CC5030018A7FF;
+			productRefGroup = 592EF032168CC5030018A7FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592EF030168CC5030018A7FF /* NinemJukeboxServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592EF02F168CC5030018A7FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EF040168CC5030018A7FF /* InfoPlist.strings in Resources */,
+				592EF046168CC5030018A7FF /* Credits.rtf in Resources */,
+				592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592EF02D168CC5030018A7FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592EF042168CC5030018A7FF /* main.m in Sources */,
+				592EF049168CC5030018A7FF /* NMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		592EF03E168CC5030018A7FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EF03F168CC5030018A7FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		592EF044168CC5030018A7FF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EF045168CC5030018A7FF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		592EF04A168CC5030018A7FF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592EF04B168CC5030018A7FF /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		592EF04D168CC5030018A7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		592EF04E168CC5030018A7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		592EF050168CC5030018A7FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NinemJukeboxServer/NinemJukeboxServer-Prefix.pch";
+				INFOPLIST_FILE = "NinemJukeboxServer/NinemJukeboxServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		592EF051168CC5030018A7FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NinemJukeboxServer/NinemJukeboxServer-Prefix.pch";
+				INFOPLIST_FILE = "NinemJukeboxServer/NinemJukeboxServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592EF02B168CC5030018A7FF /* Build configuration list for PBXProject "NinemJukeboxServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592EF04D168CC5030018A7FF /* Debug */,
+				592EF04E168CC5030018A7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592EF04F168CC5030018A7FF /* Build configuration list for PBXNativeTarget "NinemJukeboxServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592EF050168CC5030018A7FF /* Debug */,
+				592EF051168CC5030018A7FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 592EF028168CC5030018A7FF /* Project object */;
+}
