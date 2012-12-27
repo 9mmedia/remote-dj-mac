@@ -13,7 +13,30 @@
 		592EF046168CC5030018A7FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 592EF044168CC5030018A7FF /* Credits.rtf */; };
 		592EF049168CC5030018A7FF /* NMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EF048168CC5030018A7FF /* NMAppDelegate.m */; };
 		592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EF04A168CC5030018A7FF /* MainMenu.xib */; };
+		59D8F0CC168CCCFA00FB0C44 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D8F0C9168CCCF300FB0C44 /* CocoaLibSpotify.framework */; };
+		59D8F0FC168CF6E000FB0C44 /* square-600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59D8F0FB168CF6E000FB0C44 /* square-600.jpg */; };
+		59D8F100168D08E100FB0C44 /* NMPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F0FE168D08E100FB0C44 /* NMPlaybackController.m */; };
+		59D8F101168D08E100FB0C44 /* NMPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */; };
+		59D8F105168D0C0100FB0C44 /* NMSpotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */; };
+		59D8F107168D0F8100FB0C44 /* SpotifyCredentials.c in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F106168D0F8100FB0C44 /* SpotifyCredentials.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59D8F0C8168CCCF300FB0C44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503D630F13258041007772CA;
+			remoteInfo = CocoaLibSpotify;
+		};
+		59D8F0CA168CCCF300FB0C44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 504E4934155AA85400E1C0F7;
+			remoteInfo = CocoaLSTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		592EF031168CC5030018A7FF /* NinemJukeboxServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinemJukeboxServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +52,16 @@
 		592EF047168CC5030018A7FF /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
 		592EF048168CC5030018A7FF /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
 		592EF04B168CC5030018A7FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "NinemJukeboxServer/Frameworks/cocoalibspotify/Mac Framework/CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
+		59D8F0CF168CCDD700FB0C44 /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libspotify.framework; path = "NinemJukeboxServer/Frameworks/cocoalibspotify/Mac Framework/libspotify-12.1.45-Darwin-universal/libspotify.framework"; sourceTree = "<group>"; };
+		59D8F0FB168CF6E000FB0C44 /* square-600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "square-600.jpg"; path = "../../../Desktop/square-600.jpg"; sourceTree = "<group>"; };
+		59D8F0FD168D08E100FB0C44 /* NMPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMPlaybackController.h; path = Classes/NMPlaybackController.h; sourceTree = "<group>"; };
+		59D8F0FE168D08E100FB0C44 /* NMPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMPlaybackController.m; path = Classes/NMPlaybackController.m; sourceTree = "<group>"; };
+		59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NMPlaybackController.xib; path = Classes/NMPlaybackController.xib; sourceTree = "<group>"; };
+		59D8F103168D0C0100FB0C44 /* NMSpotifyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMSpotifyService.h; path = Classes/NMSpotifyService.h; sourceTree = "<group>"; };
+		59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMSpotifyService.m; path = Classes/NMSpotifyService.m; sourceTree = "<group>"; };
+		59D8F106168D0F8100FB0C44 /* SpotifyCredentials.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SpotifyCredentials.c; sourceTree = "<group>"; };
+		59D8F108168D0F8F00FB0C44 /* SpotifyCredentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyCredentials.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D8F0CC168CCCFA00FB0C44 /* CocoaLibSpotify.framework in Frameworks */,
 				592EF036168CC5030018A7FF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +80,9 @@
 		592EF026168CC5030018A7FF = {
 			isa = PBXGroup;
 			children = (
+				59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */,
 				592EF03B168CC5030018A7FF /* NinemJukeboxServer */,
+				592EF03C168CC5030018A7FF /* Supporting Files */,
 				592EF034168CC5030018A7FF /* Frameworks */,
 				592EF032168CC5030018A7FF /* Products */,
 			);
@@ -63,6 +99,7 @@
 		592EF034168CC5030018A7FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59D8F0CF168CCDD700FB0C44 /* libspotify.framework */,
 				592EF035168CC5030018A7FF /* Cocoa.framework */,
 				592EF037168CC5030018A7FF /* Other Frameworks */,
 			);
@@ -82,10 +119,13 @@
 		592EF03B168CC5030018A7FF /* NinemJukeboxServer */ = {
 			isa = PBXGroup;
 			children = (
+				59D8F102168D0BEF00FB0C44 /* Services */,
 				592EF047168CC5030018A7FF /* NMAppDelegate.h */,
 				592EF048168CC5030018A7FF /* NMAppDelegate.m */,
 				592EF04A168CC5030018A7FF /* MainMenu.xib */,
-				592EF03C168CC5030018A7FF /* Supporting Files */,
+				59D8F0FD168D08E100FB0C44 /* NMPlaybackController.h */,
+				59D8F0FE168D08E100FB0C44 /* NMPlaybackController.m */,
+				59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */,
 			);
 			path = NinemJukeboxServer;
 			sourceTree = "<group>";
@@ -93,6 +133,7 @@
 		592EF03C168CC5030018A7FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59D8F0FB168CF6E000FB0C44 /* square-600.jpg */,
 				592EF03D168CC5030018A7FF /* NinemJukeboxServer-Info.plist */,
 				592EF03E168CC5030018A7FF /* InfoPlist.strings */,
 				592EF041168CC5030018A7FF /* main.m */,
@@ -100,6 +141,27 @@
 				592EF044168CC5030018A7FF /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			path = NinemJukeboxServer;
+			sourceTree = "<group>";
+		};
+		59D8F0C0168CCCF300FB0C44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59D8F0C9168CCCF300FB0C44 /* CocoaLibSpotify.framework */,
+				59D8F0CB168CCCF300FB0C44 /* CocoaLSTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59D8F102168D0BEF00FB0C44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				59D8F103168D0C0100FB0C44 /* NMSpotifyService.h */,
+				59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */,
+				59D8F106168D0F8100FB0C44 /* SpotifyCredentials.c */,
+				59D8F108168D0F8F00FB0C44 /* SpotifyCredentials.h */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,12 +204,35 @@
 			mainGroup = 592EF026168CC5030018A7FF;
 			productRefGroup = 592EF032168CC5030018A7FF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 59D8F0C0168CCCF300FB0C44 /* Products */;
+					ProjectRef = 59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				592EF030168CC5030018A7FF /* NinemJukeboxServer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		59D8F0C9168CCCF300FB0C44 /* CocoaLibSpotify.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLibSpotify.framework;
+			remoteRef = 59D8F0C8168CCCF300FB0C44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59D8F0CB168CCCF300FB0C44 /* CocoaLSTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CocoaLSTests.app;
+			remoteRef = 59D8F0CA168CCCF300FB0C44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		592EF02F168CC5030018A7FF /* Resources */ = {
@@ -157,6 +242,8 @@
 				592EF040168CC5030018A7FF /* InfoPlist.strings in Resources */,
 				592EF046168CC5030018A7FF /* Credits.rtf in Resources */,
 				592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */,
+				59D8F0FC168CF6E000FB0C44 /* square-600.jpg in Resources */,
+				59D8F101168D08E100FB0C44 /* NMPlaybackController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +256,9 @@
 			files = (
 				592EF042168CC5030018A7FF /* main.m in Sources */,
 				592EF049168CC5030018A7FF /* NMAppDelegate.m in Sources */,
+				59D8F100168D08E100FB0C44 /* NMPlaybackController.m in Sources */,
+				59D8F105168D0C0100FB0C44 /* NMSpotifyService.m in Sources */,
+				59D8F107168D0F8100FB0C44 /* SpotifyCredentials.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +349,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NinemJukeboxServer/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinemJukeboxServer/NinemJukeboxServer-Prefix.pch";
 				INFOPLIST_FILE = "NinemJukeboxServer/NinemJukeboxServer-Info.plist";
@@ -271,6 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/NinemJukeboxServer/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinemJukeboxServer/NinemJukeboxServer-Prefix.pch";
 				INFOPLIST_FILE = "NinemJukeboxServer/NinemJukeboxServer-Info.plist";
@@ -298,6 +396,7 @@
 				592EF051168CC5030018A7FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

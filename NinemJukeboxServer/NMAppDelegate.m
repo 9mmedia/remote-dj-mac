@@ -7,12 +7,30 @@
 //
 
 #import "NMAppDelegate.h"
+#import "NMPlaybackController.h"
+#import "NMSpotifyService.h"
 
 @implementation NMAppDelegate
 
+-(void)applicationWillFinishLaunching:(NSNotification *)notification {
+  [NMSpotifyService sharedService];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+  
+
+
+  [self setPlaybackController:[[NMPlaybackController alloc] initWithNibName:nil bundle:nil]];
+  [[_window contentView] addSubview:[[self playbackController] view]];
+  
+	[self.window center];
+	[self.window orderFront:nil];
+  [self.window setBackgroundColor:[NSColor blackColor]];
+  [[NSApplication sharedApplication] setPresentationOptions:NSApplicationPresentationFullScreen];
+  
 }
+
+
 
 @end

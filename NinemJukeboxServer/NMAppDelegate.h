@@ -7,9 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CocoaLibSpotify/CocoaLibSpotify.h>
+#import "NMPlaybackController.h"
 
-@interface NMAppDelegate : NSObject <NSApplicationDelegate>
+
+
+@interface NMAppDelegate : NSObject <NSApplicationDelegate, SPSessionDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (retain) NMPlaybackController* playbackController;
 @end
