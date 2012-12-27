@@ -79,9 +79,21 @@ static NMSpotifyService* __sharedService = nil;
 {
 }
 
-- (void)playbackTrackWithURI:(NSString*)uri
+- (void)playTrackWithURI:(NSString*)uri
 {
-  
+  [[SPSession sharedSession] trackForURL:[NSURL URLWithString:uri] callback:^(SPTrack *track) {
+    if (track != nil) {
+      [SPAsyncLoading waitUntilLoaded:track timeout:kSPAsyncLoadingDefaultTimeout then:^(NSArray *tracks, NSArray *notLoadedTracks) {
+        NSLog(@"%@", track);
+        NSLog(@"%@", [track artists]);
+        NSLog(@"%@", [track name]);
+        NSLog(@"%@", [track album]);
+        [self.playbackManager playTrack:track callback:^(NSError *error) {
+          
+        }];
+      }];
+    }
+  }];
 }
 
 @end

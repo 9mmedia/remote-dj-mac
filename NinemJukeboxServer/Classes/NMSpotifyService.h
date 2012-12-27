@@ -12,7 +12,7 @@
 @interface NMSpotifyService : NSObject<SPSessionDelegate, SPSessionPlaybackDelegate>
 
 + (id)sharedService;
-- (void)playbackTrackWithURI:(NSString*)uri;
+- (void)playTrackWithURI:(NSString*)uri;
 
 @property (retain) SPPlaybackManager* playbackManager;
 @property (assign) BOOL serviceReadyForPlayback;
