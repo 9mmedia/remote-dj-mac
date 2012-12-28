@@ -16,4 +16,5 @@
 
 @property (retain) SPPlaybackManager* playbackManager;
 @property (assign) BOOL serviceReadyForPlayback;
+@property (retain) SPTrack* currentlyPlayingTrack;
 @end

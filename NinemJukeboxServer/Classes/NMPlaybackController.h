@@ -17,5 +17,6 @@
 @property (weak) IBOutlet NSTextField *trackLabel;
 @property (weak) IBOutlet NSTextField *albumLabel;
 @property (weak) IBOutlet NSTextField *nextLabel;
+@property (weak) IBOutlet NSImageView *albumArtView;
 
 @end

@@ -84,10 +84,7 @@ static NMSpotifyService* __sharedService = nil;
   [[SPSession sharedSession] trackForURL:[NSURL URLWithString:uri] callback:^(SPTrack *track) {
     if (track != nil) {
       [SPAsyncLoading waitUntilLoaded:track timeout:kSPAsyncLoadingDefaultTimeout then:^(NSArray *tracks, NSArray *notLoadedTracks) {
-        NSLog(@"%@", track);
-        NSLog(@"%@", [track artists]);
-        NSLog(@"%@", [track name]);
-        NSLog(@"%@", [track album]);
+        [self setCurrentlyPlayingTrack:track];
         [self.playbackManager playTrack:track callback:^(NSError *error) {
           
         }];
