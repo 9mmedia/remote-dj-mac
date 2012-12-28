@@ -14,7 +14,6 @@
 		592EF049168CC5030018A7FF /* NMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592EF048168CC5030018A7FF /* NMAppDelegate.m */; };
 		592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592EF04A168CC5030018A7FF /* MainMenu.xib */; };
 		59D8F0CC168CCCFA00FB0C44 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D8F0C9168CCCF300FB0C44 /* CocoaLibSpotify.framework */; };
-		59D8F0FC168CF6E000FB0C44 /* square-600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59D8F0FB168CF6E000FB0C44 /* square-600.jpg */; };
 		59D8F100168D08E100FB0C44 /* NMPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F0FE168D08E100FB0C44 /* NMPlaybackController.m */; };
 		59D8F101168D08E100FB0C44 /* NMPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */; };
 		59D8F105168D0C0100FB0C44 /* NMSpotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */; };
@@ -55,7 +54,6 @@
 		592EF04B168CC5030018A7FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		59D8F0BF168CCCF300FB0C44 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "NinemJukeboxServer/Frameworks/cocoalibspotify/Mac Framework/CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
 		59D8F0CF168CCDD700FB0C44 /* libspotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libspotify.framework; path = "NinemJukeboxServer/Frameworks/cocoalibspotify/Mac Framework/libspotify-12.1.45-Darwin-universal/libspotify.framework"; sourceTree = "<group>"; };
-		59D8F0FB168CF6E000FB0C44 /* square-600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "square-600.jpg"; path = "../../../Desktop/square-600.jpg"; sourceTree = "<group>"; };
 		59D8F0FD168D08E100FB0C44 /* NMPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMPlaybackController.h; path = Classes/NMPlaybackController.h; sourceTree = "<group>"; };
 		59D8F0FE168D08E100FB0C44 /* NMPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMPlaybackController.m; path = Classes/NMPlaybackController.m; sourceTree = "<group>"; };
 		59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NMPlaybackController.xib; path = Classes/NMPlaybackController.xib; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		592EF03C168CC5030018A7FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				59D8F0FB168CF6E000FB0C44 /* square-600.jpg */,
 				592EF03D168CC5030018A7FF /* NinemJukeboxServer-Info.plist */,
 				592EF03E168CC5030018A7FF /* InfoPlist.strings */,
 				592EF041168CC5030018A7FF /* main.m */,
@@ -246,7 +243,6 @@
 				592EF040168CC5030018A7FF /* InfoPlist.strings in Resources */,
 				592EF046168CC5030018A7FF /* Credits.rtf in Resources */,
 				592EF04C168CC5030018A7FF /* MainMenu.xib in Resources */,
-				59D8F0FC168CF6E000FB0C44 /* square-600.jpg in Resources */,
 				59D8F101168D08E100FB0C44 /* NMPlaybackController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
