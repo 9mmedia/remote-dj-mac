@@ -17,4 +17,6 @@
 @property (retain) SPPlaybackManager* playbackManager;
 @property (assign) BOOL serviceReadyForPlayback;
 @property (retain) SPTrack* currentlyPlayingTrack;
+@property (readonly) double trackPercentage;
+
 @end

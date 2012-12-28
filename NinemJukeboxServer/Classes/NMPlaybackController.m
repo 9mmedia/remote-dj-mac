@@ -21,6 +21,7 @@
         // Initialization code here.
       [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"serviceReadyForPlayback" options:NSKeyValueObservingOptionNew context:nil];
       [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"currentlyPlayingTrack" options:NSKeyValueObservingOptionNew context:nil];
+      [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"trackPercentage" options:NSKeyValueObservingOptionNew context:nil];
     }
     
     return self;
@@ -28,7 +29,7 @@
 
 - (void)playNextTrack
 {
-  [[NMSpotifyService sharedService] playTrackWithURI:@"http://open.spotify.com/track/5yEPxDjbbzUzyauGtnmVEC"];
+  [[NMSpotifyService sharedService] playTrackWithURI:@"spotify:track:7CPQtX37cGfY9mhmdwy9EK"];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -40,6 +41,19 @@
     else if( [keyPath isEqualToString:@"currentlyPlayingTrack"] ){
       SPTrack* track = [[NMSpotifyService sharedService] currentlyPlayingTrack];
       [self updateDisplayWithTrack:track];
+    }
+    else if( [keyPath isEqualToString:@"trackPercentage"] ){
+      double trackPercentage = [[NMSpotifyService sharedService] trackPercentage];
+      double trackLength = [[[NMSpotifyService sharedService] currentlyPlayingTrack] duration];
+      [_songProgressIndicator setDoubleValue:[[NMSpotifyService sharedService] trackPercentage]*100];
+      double currentTime = trackLength*trackPercentage;
+      int elapsedMinutes = currentTime/60;
+      int elapsedSeconds = (int)currentTime%60;
+      double remainingTime = trackLength-currentTime;
+      int remainingMinutes = remainingTime/60;
+      int remainingSeconds = (int)remainingTime%60;
+      [_songTimeElapsed setStringValue:[NSString stringWithFormat:@"%d:%02d", elapsedMinutes, elapsedSeconds]];
+      [_songTimeRemaining setStringValue:[NSString stringWithFormat:@"-%d:%02d", remainingMinutes, remainingSeconds]];
     }
   }
 }
@@ -54,7 +68,6 @@
 
 - (void)fetchAlbumArtForCurrentTrack:(SPTrack*)track
 {
-
   //fixme: get off urlwithstring
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     NSString* urlString = [NSString stringWithFormat:@"http://localhost:3000/album_art?uri=%@", [[track album] spotifyURL]];

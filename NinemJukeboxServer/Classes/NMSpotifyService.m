@@ -38,6 +38,7 @@ static NMSpotifyService* __sharedService = nil;
     [[SPSession sharedSession] setDelegate:self];
     [[SPSession sharedSession] setPlaybackDelegate:self];
     self.playbackManager = [[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]];
+    [_playbackManager addObserver:self forKeyPath:@"trackPosition" options:NSKeyValueObservingOptionNew context:nil];
   }
   return self;
 }
@@ -91,6 +92,16 @@ static NMSpotifyService* __sharedService = nil;
       }];
     }
   }];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+  if( [keyPath isEqualToString:@"trackPosition"] ){
+    [self willChangeValueForKey:@"trackPercentage"];
+    _trackPercentage = [_playbackManager trackPosition]/[_currentlyPlayingTrack duration];
+    NSLog(@"%f", _trackPercentage);
+    [self didChangeValueForKey:@"trackPercentage"];
+  }
 }
 
 @end

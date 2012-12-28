@@ -18,5 +18,8 @@
 @property (weak) IBOutlet NSTextField *albumLabel;
 @property (weak) IBOutlet NSTextField *nextLabel;
 @property (weak) IBOutlet NSImageView *albumArtView;
+@property (weak) IBOutlet NSProgressIndicator *songProgressIndicator;
+@property (weak) IBOutlet NSTextField *songTimeElapsed;
+@property (weak) IBOutlet NSTextField *songTimeRemaining;
 
 @end
