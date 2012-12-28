@@ -19,6 +19,7 @@
 		59D8F101168D08E100FB0C44 /* NMPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D8F0FF168D08E100FB0C44 /* NMPlaybackController.xib */; };
 		59D8F105168D0C0100FB0C44 /* NMSpotifyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */; };
 		59D8F107168D0F8100FB0C44 /* SpotifyCredentials.c in Sources */ = {isa = PBXBuildFile; fileRef = 59D8F106168D0F8100FB0C44 /* SpotifyCredentials.c */; };
+		59D8F10A168E4EB000FB0C44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D8F109168E4EB000FB0C44 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		59D8F104168D0C0100FB0C44 /* NMSpotifyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMSpotifyService.m; path = Classes/NMSpotifyService.m; sourceTree = "<group>"; };
 		59D8F106168D0F8100FB0C44 /* SpotifyCredentials.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SpotifyCredentials.c; sourceTree = "<group>"; };
 		59D8F108168D0F8F00FB0C44 /* SpotifyCredentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyCredentials.h; sourceTree = "<group>"; };
+		59D8F109168E4EB000FB0C44 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D8F10A168E4EB000FB0C44 /* QuartzCore.framework in Frameworks */,
 				59D8F0CC168CCCFA00FB0C44 /* CocoaLibSpotify.framework in Frameworks */,
 				592EF036168CC5030018A7FF /* Cocoa.framework in Frameworks */,
 			);
@@ -112,6 +115,7 @@
 				592EF038168CC5030018A7FF /* AppKit.framework */,
 				592EF039168CC5030018A7FF /* CoreData.framework */,
 				592EF03A168CC5030018A7FF /* Foundation.framework */,
+				59D8F109168E4EB000FB0C44 /* QuartzCore.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";

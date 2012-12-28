@@ -21,5 +21,6 @@
 @property (weak) IBOutlet NSProgressIndicator *songProgressIndicator;
 @property (weak) IBOutlet NSTextField *songTimeElapsed;
 @property (weak) IBOutlet NSTextField *songTimeRemaining;
+@property (weak) IBOutlet NSProgressIndicator *downloadingProgressIndicator;
 
 @end

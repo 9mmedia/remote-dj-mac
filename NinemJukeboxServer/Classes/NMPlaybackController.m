@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 9MMedia. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "NMPlaybackController.h"
 
 @interface NMPlaybackController ()
@@ -30,6 +31,7 @@
 - (void)playNextTrack
 {
   [[NMSpotifyService sharedService] playTrackWithURI:@"spotify:track:7CPQtX37cGfY9mhmdwy9EK"];
+  [[_albumArtView layer] setOpacity:0];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -68,6 +70,15 @@
 
 - (void)fetchAlbumArtForCurrentTrack:(SPTrack*)track
 {
+  CABasicAnimation* theAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+  theAnimation.duration=1.0;
+  theAnimation.repeatCount=0;
+  theAnimation.fromValue=[NSNumber numberWithFloat:1.0];
+  theAnimation.toValue=[NSNumber numberWithFloat:0.0];
+  [[_albumArtView layer] addAnimation:theAnimation forKey:@"animateOpacity"];
+  [[_albumArtView layer] setOpacity:0.0];
+  
+  [_downloadingProgressIndicator startAnimation:nil];
   //fixme: get off urlwithstring
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     NSString* urlString = [NSString stringWithFormat:@"http://localhost:3000/album_art?uri=%@", [[track album] spotifyURL]];
@@ -79,8 +90,17 @@
         if( urlData ){
           NSImage* img = [[NSImage alloc] initWithData:urlData];
           dispatch_async(dispatch_get_main_queue(), ^{
-            if( [[NMSpotifyService sharedService] currentlyPlayingTrack] == track )
+            if( [[NMSpotifyService sharedService] currentlyPlayingTrack] == track ){
               [_albumArtView setImage:img];
+              CABasicAnimation* theAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+              theAnimation.duration=1.0;
+              theAnimation.repeatCount=0;
+              theAnimation.fromValue=[NSNumber numberWithFloat:0.0];
+              theAnimation.toValue=[NSNumber numberWithFloat:1.0];
+              [[_albumArtView layer] addAnimation:theAnimation forKey:@"animateOpacity"];
+              [[_albumArtView layer] setOpacity:1.0];
+              [_downloadingProgressIndicator stopAnimation:nil];
+            }
           });
         }
       }

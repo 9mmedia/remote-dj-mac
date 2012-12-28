@@ -23,6 +23,9 @@
 
   [self setPlaybackController:[[NMPlaybackController alloc] initWithNibName:nil bundle:nil]];
   [[_window contentView] addSubview:[[self playbackController] view]];
+  NSRect frame = [[_window contentView] frame];
+  NSRect newFrame = {0,0, frame.size.width, frame.size.height};
+  [[[self playbackController] view] setFrame:newFrame];
   
 	[self.window center];
 	[self.window orderFront:nil];

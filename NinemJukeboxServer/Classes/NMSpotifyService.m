@@ -99,7 +99,6 @@ static NMSpotifyService* __sharedService = nil;
   if( [keyPath isEqualToString:@"trackPosition"] ){
     [self willChangeValueForKey:@"trackPercentage"];
     _trackPercentage = [_playbackManager trackPosition]/[_currentlyPlayingTrack duration];
-    NSLog(@"%f", _trackPercentage);
     [self didChangeValueForKey:@"trackPercentage"];
   }
 }
