@@ -10,7 +10,7 @@
 #import "NMPlaybackController.h"
 
 @interface NMPlaybackController ()
-
+@property(strong, nonatomic) NSMutableArray* currentPlaylist;
 @end
 
 @implementation NMPlaybackController
@@ -23,22 +23,29 @@
       [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"serviceReadyForPlayback" options:NSKeyValueObservingOptionNew context:nil];
       [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"currentlyPlayingTrack" options:NSKeyValueObservingOptionNew context:nil];
       [[NMSpotifyService sharedService] addObserver:self forKeyPath:@"trackPercentage" options:NSKeyValueObservingOptionNew context:nil];
+      _currentPlaylist = [NSMutableArray array];
+      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(songEnded:) name:@"PlaybackDidEnd" object:nil];
+      _playlistIndex = -1;
     }
     
     return self;
 }
 
-- (void)playNextTrack
+- (void)playCurrentTrack
 {
-  [[NMSpotifyService sharedService] playTrackWithURI:@"spotify:track:7CPQtX37cGfY9mhmdwy9EK"];
-  [[_albumArtView layer] setOpacity:0];
+  if( [_currentPlaylist count] > _playlistIndex ){
+    NSDictionary* trackDict = [_currentPlaylist objectAtIndex:_playlistIndex];
+    NSString* url = trackDict[@"url"];
+    [[NMSpotifyService sharedService] playTrackWithURI:url];
+    [[_albumArtView layer] setOpacity:0];
+  }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
   if( object == [NMSpotifyService sharedService] ){
     if( [keyPath isEqualToString:@"serviceReadyForPlayback"] ){
-      [self playNextTrack];
+      [self playCurrentTrack];
     }
     else if( [keyPath isEqualToString:@"currentlyPlayingTrack"] ){
       SPTrack* track = [[NMSpotifyService sharedService] currentlyPlayingTrack];
@@ -107,6 +114,33 @@
     }
   });
 
+}
+
+- (void)songEnded:(NSNotification*)note
+{
+  _playlistIndex++;
+  [self playCurrentTrack];
+}
+
+- (IBAction)nextTrackPressed:(id)sender {
+  if( [_currentPlaylist count] > _playlistIndex+1 ){
+    _playlistIndex++;
+    [self playCurrentTrack];
+  }
+}
+
+- (void)setTrackListing:(NSArray*)tracks withCurrentTrackAtIndex:(int)idx
+{
+  if( tracks && [tracks count] > 0 ){
+    _playlistIndex = idx;
+    NSDictionary* track = [tracks objectAtIndex:idx];
+    NSString* currentTrackURL = [[[[NMSpotifyService sharedService] currentlyPlayingTrack] spotifyURL] absoluteString];
+    [_currentPlaylist removeAllObjects];
+    [_currentPlaylist addObjectsFromArray:tracks];
+    if( ![track[@"url"] isEqualToString:currentTrackURL] ){
+      [self playCurrentTrack];
+    }
+  }
 }
 
 

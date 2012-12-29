@@ -36,9 +36,10 @@ static NMSpotifyService* __sharedService = nil;
       abort();
     }
     [[SPSession sharedSession] setDelegate:self];
-    [[SPSession sharedSession] setPlaybackDelegate:self];
     self.playbackManager = [[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]];
+    [_playbackManager setDelegate:self];
     [_playbackManager addObserver:self forKeyPath:@"trackPosition" options:NSKeyValueObservingOptionNew context:nil];
+    [_playbackManager addObserver:self forKeyPath:@"isPlaying" options:NSKeyValueObservingOptionNew context:nil];
   }
   return self;
 }
@@ -67,17 +68,19 @@ static NMSpotifyService* __sharedService = nil;
   NSLog(@"%@", aMessage);
 }
 
--(void)sessionDidEndPlayback:(id <SPSessionPlaybackProvider>)aSession
-{
-  
+-(void)sessionDidEndPlayback:(SPSession *)aSession {
+  NSLog(@"ENDED");
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaybackDidEnd" object:self];
+
 }
 
--(void)session:(id <SPSessionPlaybackProvider>)aSession didEncounterStreamingError:(NSError *)error
+-(void)playbackManagerWillStartPlayingAudio:(SPPlaybackManager *)aPlaybackManager
 {
 }
 
--(void)sessionDidLosePlayToken:(id <SPSessionPlaybackProvider>)aSession
+-(void)playbackManagerWillEndPlayingAudio:(SPPlaybackManager *)aPlaybackManager
 {
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaybackDidEnd" object:self];
 }
 
 - (void)playTrackWithURI:(NSString*)uri
@@ -87,7 +90,7 @@ static NMSpotifyService* __sharedService = nil;
       [SPAsyncLoading waitUntilLoaded:track timeout:kSPAsyncLoadingDefaultTimeout then:^(NSArray *tracks, NSArray *notLoadedTracks) {
         [self setCurrentlyPlayingTrack:track];
         [self.playbackManager playTrack:track callback:^(NSError *error) {
-          
+          NSLog(@"error: %@", error);
         }];
       }];
     }

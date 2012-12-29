@@ -22,5 +22,8 @@
 @property (weak) IBOutlet NSTextField *songTimeElapsed;
 @property (weak) IBOutlet NSTextField *songTimeRemaining;
 @property (weak) IBOutlet NSProgressIndicator *downloadingProgressIndicator;
+@property(nonatomic) int playlistIndex;
 
+- (IBAction)nextTrackPressed:(id)sender;
+- (void)setTrackListing:(NSArray*)tracks withCurrentTrackAtIndex:(int)idx;
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CocoaLibSpotify/CocoaLibSpotify.h>
 
-@interface NMSpotifyService : NSObject<SPSessionDelegate, SPSessionPlaybackDelegate>
+@interface NMSpotifyService : NSObject<SPSessionDelegate, SPPlaybackManagerDelegate>
 
 + (id)sharedService;
 - (void)playTrackWithURI:(NSString*)uri;
